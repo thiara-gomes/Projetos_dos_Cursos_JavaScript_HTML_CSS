@@ -1,0 +1,316 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caixa {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color:black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #C78C19;
+    text-decoration: underline;
+}
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    /*background: #CCCCCC;*/
+    margin: 0 1.5%; /*espaçamento externo, zero para cima e para baixo e 1.5% para os lados*/
+    padding: 30px 20px; /*espaçamento interno, 30 pixels para cima e para baixo e 20 pixels para as laterais*/
+    box-sizing: border-box; /*os meus 30%, agora são definitivos, são sempre a largura e esses pixels de espaçamento interno, estão dentro desses 30%. A gente tem um espaçamento interno de 20 pixels para cada lado e a gente tem um elemento ocupando 30% da largura*/
+    /*border-color: #000000;
+    border-width: 2px;
+    border-style: solid;*/
+    border: 2px solid #000000;/*declaração unificada de borda = tamanho, a configuração (tipo) e por último a cor.*/
+    border-radius: 10px; /*propriedade border-radius = desenhar o canto arredondado dos elementos.*/
+    /*border-radius: 10px 20px 30px 40px;*/
+}
+
+.produtos li:hover {
+    border-color: #C78C19;
+}
+
+.produtos li:active {
+    border-color: #088C19;
+}
+
+.produtos li:hover h2 {
+    font-size: 34px;
+    /*Eu quero que o h2, quando o mouse estiver por cima do “li” dos produtos, ele tenha o tamanho de fonte de 34 pixels.*/
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao {
+    font-size: 18px;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0 0;
+    /*margin-top: 10px; = margin: 10px 0 0;*/
+}
+
+footer {
+    text-align: center;
+    background: url("../img/bg.jpg");
+    padding: 40px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px 0 0;
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label, form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 20px;
+}
+
+.input-padrao {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    /*transition: 1s background;*/
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background: darkorange;
+    transform: scale(1.2);
+}
+
+table {
+    margin: 20px 0 40px;
+}
+
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+/*css da página inicial*/
+
+.banner {
+    width: 100%;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left; /*clear "limpa" o float que está posicionado à esquerda, colocado em 'utensilios'*/
+    /*text-shadow: 2px 2px #555555; /*exemplo de como criar sombras em textos*/
+    /*color: rgba(0, 0, 0, 0.4); /*Com CSS 3, podemos utilizar mais uma camada - a de opacidade, chamada alfa - nas cores em RGB. Para tanto, utilizamos o rgba e definimos os valores que desejamos*/
+}
+
+/*.titulo-principal:first-letter {
+    font-weight: bold;
+}*/
+
+.principal {
+    padding: 3em 0; /* 3em pra cima e pra baixo e zero para laterais*/
+    background: #fefefe;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensilios {
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0; /*margem de 20px para a direita, 20px para baixo e 0 para a esquerda*/
+}
+
+.mapa {
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE, #888888);
+    /*background: linear-gradient(green,lightgreen); 
+     background: linear-gradient(45deg,lightgreen,green,darkgreen);
+     no linear-gradient podemos add quantas cores quisermos, que o CSS irá administrá-las automaticamente. É possível, inclusive, ajustar a inclinação das cores, por exemplo 45deg e então ficarão posicionadas em 45graus.  há valores subentendidos em cada uma delas, na sequência: 0%, 25%, 50%, e 75% para a última cor da sequência. Mas podemos manipular esses valores de acordo com nosso interesse(green 50%) Além do degradê linear(linear-gradient) temos ainda a opção radial(radial-gradient)*/   
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+    /*box-shadow: inset 0 0 30px #ff0000; /*exemplo de como criar sombras internas*/
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top; /*para que a lista não fique alinhada pela parte inferior, mas sim pela parte superior, usar vertical-align com o valor top*/
+}
+
+.imagem-beneficios {
+    width: 60%;
+    opacity: 1;
+    transition: 400ms;
+    box-shadow: 10px 10px 10px #000000;
+    /*box-shadow: 10px 10px 5px 20px #000000, -10px -10px yellow, -20px 20px rgba(255,0,0,0.5); 
+    /*propriedade para gerar sombra: box-shadow. Ela possuui eixo X, T e uma cor. Nesse caso, deslocamos 10px no eixo X e Y, a cor que utilizaremos será preto. Podemos melhorar a qualidade estética dessa sombra ao adicionarmos uma terceira propriedade chamada blur, em que podemos aplicar um nível de desfoque específico, no caso, inseriremos um valor de 5px. Quanto maior a quantidade de pixels que inserirmos, mais claro sera o efeito de desfoque. Temos ainda uma quarta propriedade que configura a intensidade da borda a partir do tamanho do elemento, isto é, o tamanho da sombra projetada. Neste caso, inseriremos 20px. Podemos adicionar várias sombras em um mesmo elemento, basta que o conteúdo esteja separado por uma vírgula. Essa nova sombra terá valores negativos e terá a cor amarela. Podemos, ainda, inserir uma terceira sombra com a cor rgba() com a camada de opacidade e borda vermelha*/
+}
+
+.imagem-beneficios:hover { 
+    opacity: 0.4;
+    /*propriedade opacity que pode ter valores entre 0 a 1 (100%), sendo que 0 o elemento estará totalmente oculto. Se quisermos exibir a imagem com opacidade de 40%, ajustamos o valor para 0.4*/
+}
+
+.itens {
+    line-height: 1.5;
+}
+
+.itens:first-child {
+    font-weight: bold;
+    /*outros pseudo-elementos: last-child, nth-child() se receber, por exemplo o número 4, se refere ao quarto elemento da lista. Podemos ainda utilizar valores como 2n com o nth-child(), o que quer dizer marcamos todos os elementos pares da lista, isto é, o segundo, quarto e sexto elemento da lista ficam em negrito.*/
+} 
+
+.itens:before {
+    content: "\25B6";
+}
+
+.video {
+    width: 560px;
+    margin: 2em auto; /*1em pra cima e pra baixo e automática nas laterais*/
+}
+
+@media screen and (max-width: 480px) {
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto; 
+        /*Precisaremos, então, adaptar o CSS para que ele funcione na tela do celular. Precisamos entregar para telas até 450px um estilo diferente, e faremos isso por meio de media queries. Perguntaremos ao navegador qual é o tamanho da tela em questão e, se for aquele que desejamos, entregaremos o estilo correto. Para realizar isso, utilizaremos o @media, com o valor do tipo de tela screen e a pesquisa. Todas as telas que tenham até 450, terão esse estilo diferente, reescrito*/
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .lista-beneficios, imagem-beneficios {
+        width: 100%
+    }
+}
+       
+
+/*
+Quero um espaçamento para a esquerda. Então, primeiro para o topo, depois para a direita, terceiro para baixo, por último para a esquerda, 0 0 0 15 pixels
+propriedade text-transform é a responsável pela transformação do texto para maiúsculo, quando usamos o valor uppercase
+
+na minha caixa, o espaçamento externo, ou seja, a margem, para cima e para baixo seja zero e para direita e para a esquerda, elas se calculem automaticamente e para isso, a gente declara que elas são auto, de automáticos. 
+o meu menu está colado na minha caixa, porque o meu menu é absoluto, mas a minha caixa é relativa, então ele é absoluto em relação a esse elemento que também levantou do meu HTML.
+no meu header, eu vou botar um padding de 20 pixels para cima e para baixo e zero para a direita e para a esquerda.  
+
+Comportamento do elemento quando add o padding: o elemento aumenta o seu tamanho. Quando declaro que existe um espaçamento interno, estou aumentando o conteúdo.
+O elemento aumenta a sua largura, já que o tamanho dele ficou maior. A não ser que a propriedade box-sizing tenha o valor border-box.
+
+Na estrutura de "caixas" do CSS, a borda fica posicionada entre o padding e a margin = declarando borda unificada
+
+HOVER = mapeamos o comportamento do mouse por cima do elemento, e podemos usar isso para destacar visualmente o elemento em questão.
+    ou seja, quando o mouse estiver por cima de alhum elemento, há troca de cor e/ou inserção underline desse elemento.
+ACTIVE = quando um elemento está sendo ativado pelo usuário
+
+Como adicionamos uma imagem de fundo em um elemento? Com o valor url no background do elemento,  referenciando o endereço da imagem na url().
+
+Digamos que você está em uma pasta que está no mesmo nível hierárquico de img. Por exemplo, tem a pasta "principal" e dentro dela tem as pastas "img" e "web". Se o seu html estiver na pasta "web" e você quer acessar a foto.jpg da pasta "img" vai ter que voltar um nível na hierarquia. Então vai usar "../img/foto.jpg". Outra opção é pegar a imagem tacar no Browser, copiar o link, e por no seu html.
+
+Se quisermos que a fonte de titulo-principal seja o dobro da fonte padrão, independe do tamanho dessa fonte padrão, utilizamos a medida 'em', a media proporcional para pixels. Se quisermos duas vezes o tamanho base (15 pixels), basta escrever '2em'.
+
+Incluiremos uma margem de 0 0 1em. É sempre interessante inserir um espaçamento que seja proporcional ao tamanho da fonte, o que facilita a leitura do usuário.
+
+Usando o pseudo-elemento: para seleção de elementos específicos temos três opções: a primeira delas é utilizar uma classe pseudo-elemento first-child. Temos seis itens que são irmãos nos itens da lista, e as alteração serão feitas no primeiro item. Escreveremos que o peso da fonte será em negrito.
+*/
