@@ -1,0 +1,12 @@
+/* css/form.css */
+
+.panel-form {
+    margin-top: 32px;
+}
+
+.panel-form .title {
+    font-size: 32px;
+    color: #EF7247;
+    text-align: center;
+    text-transform: uppercase;
+}

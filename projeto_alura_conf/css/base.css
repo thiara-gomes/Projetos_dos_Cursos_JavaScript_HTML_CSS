@@ -1,0 +1,47 @@
+/* css/base.css - o css base servirá para várias outras partes e páginas do projeto*/
+
+.container {
+    width: 96%;
+    margin: 0 auto; /*zero = topo e base; auto = esquerda e direita*/
+}
+
+.field {
+    margin-bottom: 16px;
+}
+
+/*Por padrão um label é do tipo inline, assim como um input. Todavia, precisamos de um label acima do input. Conseguimos isso mudando seu modo de display de inline para block*/
+/*.field .field-label*/
+.field label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/*Precisamos que cada input tenha 100% do tamanho do seu elemento pai para esticar qualquer tamanho de tela. Para isso, transformaremos o elemento em block para que seja possível alterar a propriedade width*/
+.field .field-input {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    padding: 5px; /*separar o conteúdo (texto a ser digitado) da borda da caixinha de input do e-mail*/
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #48A2A6;
+}
+
+.button {
+    display: inline-block;
+    color: white;
+    text-decoration: none; /*para tirar o underline do link*/
+    font-size: 18px;
+    font-weight: bold;
+    padding: 25px 50px;
+    margin: 5px;
+    background-color: #48A3A6;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px black;
+}
+
+/*Para que seja possível centralizar o botão, é o seu elemento PAI que precisa receber text-align*/
+.button-place {
+    text-align: center;
+}

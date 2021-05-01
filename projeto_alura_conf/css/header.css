@@ -1,0 +1,92 @@
+/* css/header.css */
+
+.header {
+    background: url('../img/destaque.jpeg') no-repeat;
+    background-size: cover;
+    padding-top: 32px;
+}
+  
+.header .main-menu {
+    text-align: center;
+}
+  
+.header .main-menu .menu-item {
+    display: inline-block;
+    margin: 0 2px 32px 0;
+}
+
+.header .main-menu .menu-item a {
+    color: white;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    text-transform: uppercase;
+    text-decoration: none; /*para tirar o underline do link*/
+    transition: background-color 0.5s; /*tempo de transição da cor do fundo aplicada pelo efeito hover*/   
+}
+
+.header .main-menu .menu-item a:hover {
+    background-color: #48A3A6;
+}
+
+.header .jumbotron {
+    padding: 0 0 44px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.header .panel-main {
+    color: white;
+    text-shadow: 4px 4px 10px black;
+}
+
+.header .jumbotron .title {
+    /*font-size: 48px;*/
+    font-size: 3em; /*3em = 3 x 28px (esse 28 é oruindo do @media)*/
+}
+
+/*
+.header .panel-main .title {
+    font-size: 48px;
+}
+*/
+
+.header .jumbotron .subtitle {  
+    color: #64ff64;
+    /*font-size: 42px;*/
+    font-size: 2.6em; /*2.6em = 2.6 x 28px (esse 28 é oruindo do @media)*/
+    margin-top: 8px;
+}
+
+/*
+.header .panel-main .subtitle {  
+    color: #64ff64;
+    font-size: 42px;
+    margin-top: 8px;
+}
+*/
+
+/* OBS: com a criação do botão de inscrição, decidiu-se criar um estilo único para todos os botões do projeto; com isso, a estilização css do button foi transferida para o base.css, o css comum a todo projeto.
+.header .jumbotron .button {
+    display: inline-block;
+    color: white;
+    text-decoration: none; //para tirar o underline do link//
+    font-size: 18px;
+    font-weight: bold;
+    padding: 25px 50px;
+    margin: 5px;
+    background-color: #48A3A6;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px black;
+}
+*/
+
+.header .jumbotron .panel-subscribe {
+    margin-top: 28px;
+}
+
+@media(min-width: 650px) {
+    .header .jumbotron {
+        font-size: 28px;
+    }
+}
